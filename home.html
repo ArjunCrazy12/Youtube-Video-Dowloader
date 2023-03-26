@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><b>YouTube Downloader</b></title>
+    <style>
+      body {
+        background-image: url("https://wallpapercave.com/wp/5uxMs7A.png");
+        background-size: cover;
+        font-family: 'Montserrat';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-family: 'Tahoma', cursive;
+        font-size: 60px;
+        margin-bottom: 200;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      button {
+        margin-top: 20px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #311847;
+        border: none;
+        border-radius: 200px;
+        font-family: 'Montserrat';
+        cursor: pointer;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Lobster&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1><b>YouTube Downloader</b></h1>
+    </header>
+    <form id="download-form" method="post" action="/download">
+      <input type="text" id="url" name="url" placeholder="Paste the URL here:" value="">
+      <button type="submit" name="choice" value="video">Download Video (MP4 file)</button>
+      <button type="submit" name="choice" value="audio">Download Audio (MP3 file)</button>
+    </form>
+
+    <script>
+      function redirectToStatus() {
+        document.getElementById('download-form').submit();
+        window.location.href = "/status.html";
+      }
+    </script>
+  </body>
+</html>

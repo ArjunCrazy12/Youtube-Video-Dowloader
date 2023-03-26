@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/wp/5uxMs7A.png");
+            background-size: cover;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .loader {
+        border: 10px solid #f3f3f3; /* Light grey */
+        border-top: 10px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        animation: spin 2s linear infinite;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .loader-container {
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 0;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div class="center">
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+        <h1>Downloading Video, Please wait.</h1>
+        <p>Your download will start shortly...</p>
+    </div>
+</body>
+</html>
